@@ -25,6 +25,6 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents
-    self.note_contents if !self.note_contents.blank?
+    self.notes if self.notes
   end
 end
