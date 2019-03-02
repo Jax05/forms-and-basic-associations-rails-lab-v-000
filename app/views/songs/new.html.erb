@@ -8,6 +8,7 @@
   <%= f.label :genre_name %>
   <%= f.collection_select :genre_name, Genre.all, :name, :name %><br />
 
+  <%= f.label :song_notes_ids %>
   <input name="song[song_notes_ids][]">
   <input name="song[song_notes_ids][]">
   <input name="song[song_notes_ids][]">
