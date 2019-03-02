@@ -20,11 +20,11 @@ class Song < ActiveRecord::Base
 
   def note_contents=(note_contents)
     note_contents.each do |n|
-      self.notes.build(n) if !n.blank?
+      self.note_contents.build(n) if !n.blank?
     end
   end
 
   def note_contents
-    self.notes if self.notes
+    self.note_contents if self.note_contents
   end
 end
