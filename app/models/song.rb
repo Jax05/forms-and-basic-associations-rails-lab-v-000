@@ -21,7 +21,7 @@ class Song < ActiveRecord::Base
   def note_contents=(note_ids)
     note_ids.each do |id|
       note = Note.find_or_create_by(id: id)
-      self.note_contents << note
+      self.notes << note
     end
   end
 end
