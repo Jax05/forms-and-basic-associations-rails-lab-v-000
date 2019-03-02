@@ -17,4 +17,11 @@ class Song < ActiveRecord::Base
   def genre_name
     self.genre.name if self.genre
   end
+
+  def notes=(notes)
+    notes.each do |note|
+      note = Note.find(note)
+      self.notes << note
+    end
+  end
 end
