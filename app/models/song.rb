@@ -18,13 +18,13 @@ class Song < ActiveRecord::Base
     self.genre.name if self.genre
   end
 
-  def note_contents=(note_contents)
-    note_contents.each do |n|
-      self.note_contents.build(n) if !n.blank?
+  def note_contents=(notes)
+    notes.each do |content|
+      self.notes.build(content: content) if !content.blank?
     end
   end
 
   def note_contents
-    self.note_contents if self.note_contents
+    self.notes if self.notes
   end
 end
